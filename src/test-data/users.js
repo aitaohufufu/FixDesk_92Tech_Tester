@@ -4,21 +4,24 @@ export const validUsers = [
         password: "pass1234",
         phone: "000000000",
     },
+
     // {
     //     username: "technician",
     //     password: "pass1234",
     //     phone: "111111111",
     // },
+
     // {
     //     username: "user",
     //     password: "pass1234",
     //     phone: "222222222",
     // },
-    // {
-    //     username: "stock",
-    //     password: "pass1234",
-    //     phone: "333333333",
-    // },
+
+    {
+        username: "stock",
+        password: "pass1234",
+        phone: "333333333",
+    },
 ];
 
 export const invalidUsers = [
