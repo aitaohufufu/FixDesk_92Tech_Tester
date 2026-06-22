@@ -1,5 +1,6 @@
 import { test as base } from '@playwright/test';
 import { LoginPage } from '../pages/login.page';
+import { ReportCSVPage } from '../pages/report_csv.page';
 
 /**
  * @typedef {Object} MyFixtures
@@ -10,7 +11,11 @@ import { LoginPage } from '../pages/login.page';
 export const test = base.extend({
     loginPage: async ({ page }, use) => {
         await use(new LoginPage(page));
-    }
+    },
+
+    reportCSVPage: async ({ page }, use) => {
+        await use(new ReportCSVPage(page));
+    },
 
 });
 
