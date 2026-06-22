@@ -1,0 +1,23 @@
+{
+  "name": "fixdesk_92tech_tester",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000F\u0000i\u0000x\u0000D\u0000e\u0000s\u0000k\u0000_\u00009\u00002\u0000T\u0000e\u0000c\u0000h\u0000_\u0000T\u0000e\u0000s\u0000t\u0000e\u0000r\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aitaohufufu/FixDesk_92Tech_Tester.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aitaohufufu/FixDesk_92Tech_Tester/issues"
+  },
+  "homepage": "https://github.com/aitaohufufu/FixDesk_92Tech_Tester#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^26.0.0"
+  }
+}
