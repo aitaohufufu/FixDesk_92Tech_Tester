@@ -1,13 +1,23 @@
 import { test, expect } from '../utils/base.js';
+import { sendTestReport } from '../utils/reportHelper.js';
 
 test.describe('Login', () => {
+
+    test.afterEach(async ({ page, request }, testInfo) => {
+        await sendTestReport(page, request, testInfo, 'AUTH');
+    });
 
     //  ==================================================
     //  Functional Case
     //  ==================================================
 
     test('AUTH-01 เข้าสู่หน้าจอ "เข้าสู่ระบบ (Login Page)"', async ({ loginPage }) => {
-        
+        await loginPage.goto();
+
+        await loginPage.waitForLoaded();
+
+        expect(loginPage.isURL('/login')).toBe(true);
+        await expect(loginPage.loginTitle).toBeVisible();
     });
 
     test('AUTH-02 เข้าสู่ระบบด้วยบัญชีผู้ใช้ใดก็ได้ โดยกรอกชื่อบัญชีผู้ใช้ (Username) และรหัสผ่าน (Password) ที่ถูกต้อง', async ({ loginPage }) => {
