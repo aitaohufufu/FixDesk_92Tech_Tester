@@ -5,7 +5,7 @@ import { expect } from '@playwright/test';
  */
 export async function sendTestReport(page, request, testInfo, sheetName) {
 
-    const testIdMatch = testInfo.title.match(/[A-Z_]+-\d+/);
+    const testIdMatch = testInfo.title.match(/[A-Z_]+(?:-[A-Z_]+)*-\d+/);
     
     if (!testIdMatch) return;
 

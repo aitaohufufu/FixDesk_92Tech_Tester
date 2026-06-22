@@ -3,7 +3,7 @@ import { sendTestReport } from '../utils/reportHelper.js';
 import { fillUserNamePassword, gotoLoginPage } from '../utils/authHelper.js';
 import { validUsers, invalidUsers } from '../test-data/users.js';
 
-test.describe('Authentication', () => {
+test.describe('Authentication [12, 14 disabled]', () => {
 
     test.afterEach(async ({ page, request }, testInfo) => {
         await sendTestReport(page, request, testInfo, 'AUTH');
@@ -100,7 +100,6 @@ test.describe('Authentication', () => {
     });
 
     validUsers.forEach((user, index) => {
-        
         test(`AUTH-09 [${user.username}] ออกจากระบบ (Logout) ด้วยบัญชีผู้ใช้ใดก็ได้`, async ({ loginPage }) => {
             await fillUserNamePassword(loginPage, user.username, user.password);
             await loginPage.clickSignIn();
@@ -115,7 +114,6 @@ test.describe('Authentication', () => {
             await loginPage.page.waitForURL('**/home');
             expect(loginPage.isURL('/home')).toBe(true);
         });
-
     });
 
     // =========================================================================

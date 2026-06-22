@@ -32,8 +32,8 @@ export class LoginPage extends BasePage {
      * กรอกชื่อผู้ใช้และรหัสผ่าน
      */
     async fillLogin(username, password) {
-        await this.usernameInput.fill(username);
-        await this.passwordInput.fill(password);
+        await this.usernameInput.fill(username || '');
+        await this.passwordInput.fill(password || '');
     }
     
     /**
