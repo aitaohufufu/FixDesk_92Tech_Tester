@@ -10,7 +10,7 @@ import { expect } from '@playwright/test';
  */
 export async function sendTestReport(page, request, testInfo, sheetName) {
 
-    const testIdMatch = testInfo.title.match(/[A-Z_]+(?:-[A-Z_]+)*-\d+/);
+    const testIdMatch = testInfo.title.match(/^[A-Z0-String_()-]+-\d+/i) || testInfo.title.match(/[A-Z0-9-]+-\d+/);
     
     if (!testIdMatch) return;
 

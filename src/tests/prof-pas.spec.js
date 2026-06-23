@@ -14,7 +14,7 @@ async function gotoModal(loginPage, editPasswordModal, username, password, role)
     await editPasswordModal.clickEditPasswordMenu();
 }
 
-test.describe('Profile Management - Edit Password []', () => {
+test.describe('Profile Management - Edit Password [03:admin failed]', () => {
 
     test.afterEach(async ({ page, request }, testInfo) => {
         await sendTestReport(page, request, testInfo, 'PROF-PAS');

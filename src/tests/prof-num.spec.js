@@ -7,7 +7,7 @@ async function gotoModal(loginPage, editPhoneModal, username, password, role) {
     await fillUserNamePassword(loginPage, username, password);
     await loginPage.clickSignIn();
 
-    const expectedHomePattern = `/main/${username}-home`;
+    const expectedHomePattern = `/main/${role}-home`;
     await loginPage.page.waitForURL(`**${expectedHomePattern}`);
     await expect(loginPage.mainTitle).toBeVisible({ timeout: 3000 });
 
