@@ -2,6 +2,11 @@ import { expect } from '@playwright/test';
 
 /**
  * ฟังก์ชันส่งผลการทดสอบไปยัง Google Sheets
+ * @param {Object} page 
+ * @param {Object} request 
+ * @param {Object} testInfo - รายละเอียดกรณีทดสอบ
+ * @param {string} sheetName - ชื่อชีต
+ * @returns 
  */
 export async function sendTestReport(page, request, testInfo, sheetName) {
 

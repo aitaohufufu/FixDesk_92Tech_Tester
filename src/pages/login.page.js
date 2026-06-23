@@ -28,8 +28,12 @@ export class LoginPage extends BasePage {
         this.alertMessage = page.locator('p.text-red-600');
     }
 
+    
+
     /**
-     * กรอกชื่อผู้ใช้และรหัสผ่าน
+     * กรอกชื่อผู้ใช้ และรหัสผ่าน
+     * @param {string} username - ชื่อบัญชีผู้ใช้
+     * @param {string} password - รหัสผ่าน
      */
     async fillLogin(username, password) {
         await this.usernameInput.fill(username || '');

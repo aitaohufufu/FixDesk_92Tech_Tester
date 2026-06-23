@@ -2,25 +2,41 @@ export const validUsers = [
     {
         username: "admin",
         password: "pass1234",
+        newPassword: "newPassword",
         phone: "000000000",
+        role: "admin",
     },
 
     // {
     //     username: "technician",
     //     password: "pass1234",
     //     phone: "111111111",
+    //     role: "technician",
     // },
 
     // {
     //     username: "user",
     //     password: "pass1234",
     //     phone: "222222222",
+    //     role: "user",
     // },
 
     {
         username: "stock",
         password: "pass1234",
+        newPassword: "newPassword",
         phone: "333333333",
+        role: "stock",
+    },
+];
+
+export const testUsers = [
+    {
+        username: "test",
+        password: "test@0000T",
+        newPassword: "newPassword",
+        phone: "0000000000",
+        role: "admin",
     },
 ];
 

@@ -29,7 +29,7 @@ test.describe('Authentication [12, 14 disabled]', () => {
             await fillUserNamePassword(loginPage, user.username, user.password);
             await loginPage.clickSignIn();
 
-            const expectedPattern = `/main/${user.username}-home`;
+            const expectedPattern = `/main/${user.role}-home`;
             await loginPage.page.waitForURL(`**${expectedPattern}`);
 
             expect(loginPage.isURL(expectedPattern)).toBe(true);
@@ -104,7 +104,7 @@ test.describe('Authentication [12, 14 disabled]', () => {
             await fillUserNamePassword(loginPage, user.username, user.password);
             await loginPage.clickSignIn();
 
-            const expectedPattern = `/main/${user.username}-home`;
+            const expectedPattern = `/main/${user.role}-home`;
             await loginPage.page.waitForURL(`**${expectedPattern}`);
             expect(loginPage.isURL(expectedPattern)).toBe(true);
             await expect(loginPage.mainTitle).toBeVisible({ timeout: 3000 }); 
@@ -130,7 +130,7 @@ test.describe('Authentication [12, 14 disabled]', () => {
         await tempLoginPage.rememberMeCheckbox.check();
 
         await tempLoginPage.clickSignIn();
-        const expectedPattern = `/main/${user.username}-home`;
+        const expectedPattern = `/main/${user.role}-home`;
         await tempTab.waitForURL(`**${expectedPattern}`);
         await tempTab.close();
 
@@ -142,12 +142,12 @@ test.describe('Authentication [12, 14 disabled]', () => {
     });
 
     test(`AUTH-11 ออกจากระบบแล้วคลิกปุ่มย้อนกลับ (Back) ของเว็บเบราว์เซอร์`, async ({ loginPage }) => {
-        const sampleUser = validUsers[0];
+        const user = validUsers[0];
 
-        await fillUserNamePassword(loginPage, sampleUser.username, sampleUser.password);
+        await fillUserNamePassword(loginPage, user.username, user.password);
         await loginPage.clickSignIn();
 
-        const expectedPattern = `/main/${sampleUser.username}-home`;
+        const expectedPattern = `/main/${user.role}-home`;
         await loginPage.page.waitForURL(`**${expectedPattern}`);
 
         await loginPage.clickLogout();

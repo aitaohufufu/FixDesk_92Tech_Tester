@@ -27,6 +27,8 @@ export class EditPhoneModal extends BasePage {
 
     /**
      * กรอกข้อมูลเบอร์โทรศัพท์ และรหัสผ่าน
+     * @param {string} phoneNumber - เบอร์โทรศัพท์
+     * @param {string} password - รหัสผ่าน
      */
     async fillPhonePassword(phoneNumber, password) {
         await this.phoneInput.fill(phoneNumber || '');
