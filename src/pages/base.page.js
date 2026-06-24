@@ -1,3 +1,6 @@
+import { expect } from '../utils/base.js';
+import { fillUserNamePassword } from '../utils/authHelper';
+
 export class BasePage {
 
     /**
@@ -31,5 +34,14 @@ export class BasePage {
      */
     async goto() {
         await this.page.goto(this.path);
+    }
+
+    async gotoHome(loginPage, username, password, role) {
+        await fillUserNamePassword(loginPage, username, password);
+        await loginPage.clickSignIn();
+    
+        const expectedHomePattern = `/main/${role}-home`;
+        await loginPage.page.waitForURL(`**${expectedHomePattern}`);
+        await expect(loginPage.mainTitle).toBeVisible({ timeout: 3000 });
     }
 }

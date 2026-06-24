@@ -28,6 +28,14 @@ export const validUsers = [
         phone: "333333333",
         role: "stock",
     },
+
+    {
+        username: "manager",
+        password: "pass1234",
+        newPassword: "newPassword",
+        phone: "4444444444",
+        role: "manager",
+    },
 ];
 
 export const testUsers = [
@@ -55,6 +63,10 @@ export const invalidUsers = [
     },
     {
         username: "fakestock",
+        password: "fakepassword",
+    },
+    {
+        username: "fakemanager",
         password: "fakepassword",
     },
 ];
