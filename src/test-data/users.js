@@ -7,19 +7,19 @@ export const validUsers = [
         role: "admin",
     },
 
-    // {
-    //     username: "technician",
-    //     password: "pass1234",
-    //     phone: "111111111",
-    //     role: "technician",
-    // },
+    {
+        username: "technician",
+        password: "pass1234",
+        phone: "111111111",
+        role: "technician",
+    },
 
-    // {
-    //     username: "user",
-    //     password: "pass1234",
-    //     phone: "222222222",
-    //     role: "user",
-    // },
+    {
+        username: "user",
+        password: "pass1234",
+        phone: "222222222",
+        role: "user",
+    },
 
     {
         username: "stock",

@@ -3,6 +3,7 @@ import { LoginPage } from '../pages/login.page';
 import { EditPhoneModal } from '../modals/edit-phone.modal';
 import { EditPasswordModal } from '../modals/edit-password.modal';
 import { RepairFormPage } from '../pages/repair-form.page';
+import { RepairStatusPage } from '../pages/repair-status.page';
 import { ReportCSVPage } from '../pages/report-csv.page';
 
 /**
@@ -11,6 +12,7 @@ import { ReportCSVPage } from '../pages/report-csv.page';
  * @property {EditPhoneModal} editPhoneModal
  * @property {EditPasswordModal} editPasswordModal
  * @property {RepairFormPage} repairFormPage
+ * @property {RepairStatusPage} repairStatusPage
  * @property {ReportCSVPage} reportCSVPage
  */
 
@@ -30,6 +32,10 @@ export const test = base.extend({
 
     repairFormPage: async ({ page }, use) => {
         await use(new RepairFormPage(page));
+    },
+
+    repairStatusPage: async ({ page }, use) => {
+        await use(new RepairStatusPage(page));
     },
 
     reportCSVPage: async ({ page }, use) => {
