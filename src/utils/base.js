@@ -5,6 +5,7 @@ import { EditPasswordModal } from '../modals/edit-password.modal';
 import { RepairFormPage } from '../pages/repair-form.page';
 import { RepairStatusPage } from '../pages/repair-status.page';
 import { RepairManagementPage } from '../pages/repair-management.page';
+import { UserManagementPage } from '../pages/user-management.page';
 import { ReportCSVPage } from '../pages/report-csv.page';
 
 /**
@@ -15,6 +16,7 @@ import { ReportCSVPage } from '../pages/report-csv.page';
  * @property {RepairFormPage} repairFormPage
  * @property {RepairStatusPage} repairStatusPage
  * @property {RepairManagementPage} repairManagementPage
+ * @property {UserManagementPage} userManagementPage
  * @property {ReportCSVPage} reportCSVPage
  */
 
@@ -42,6 +44,10 @@ export const test = base.extend({
 
     repairManagementPage: async ({ page }, use) => {
         await use(new RepairManagementPage(page));
+    },
+
+    userManagementPage: async ({ page }, use) => {
+        await use(new UserManagementPage(page));
     },
 
     reportCSVPage: async ({ page }, use) => {

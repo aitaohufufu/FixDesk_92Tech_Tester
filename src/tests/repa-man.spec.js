@@ -1,6 +1,5 @@
 import { test, expect } from '../utils/base.js';
 import { sendTestReport } from '../utils/reportHelper.js';
-import { fillUserNamePassword } from '../utils/authHelper.js';
 import { validUsers } from '../test-data/users.js';
 
 async function gotoEditRepair(loginPage, repairManagementPage, username, password, role) {
