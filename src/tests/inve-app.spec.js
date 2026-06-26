@@ -90,9 +90,7 @@ test.describe('Inventory Management - Requisition Approvement', () => {
         await inventoryApplyPage.checkRequisitionRow();
     });
 
-    test(`INVE-APP-08 ทดสอบการเบิกซ้ำรายการที่มีผลอนุมัติเสร็จสิ้นแล้ว`, async ({ loginPage, inventoryApplyPage }) => {
-        const user = validUsers[3];
-        await goto(loginPage, inventoryApplyPage, user.username, user.password, user.role);
+    test.skip(`INVE-APP-08 ทดสอบการเบิกซ้ำรายการที่มีผลอนุมัติเสร็จสิ้นแล้ว`, async ({ loginPage, inventoryApplyPage }) => {
 
     });
 });
