@@ -8,6 +8,7 @@ import { RepairManagementPage } from '../pages/repair-management.page';
 import { UserManagementPage } from '../pages/user-management.page';
 import { ReportCSVPage } from '../pages/report-csv.page';
 import { InventoryApplyPage } from '../pages/inventory-apply.page';
+import { InventoryManagementPage } from '../pages/inventory-management.page';
 
 /**
  * @typedef {Object} MyFixtures
@@ -20,6 +21,7 @@ import { InventoryApplyPage } from '../pages/inventory-apply.page';
  * @property {UserManagementPage} userManagementPage
  * @property {ReportCSVPage} reportCSVPage
  * @property {InventoryApplyPage} inventoryApplyPage
+ * @property {InventoryManagementPage} inventoryManagementPage
  */
 
 /** @type {import('@playwright/test').TestType<MyFixtures, {}>} */
@@ -58,6 +60,10 @@ export const test = base.extend({
 
     inventoryApplyPage: async ({ page }, use) => {
         await use(new InventoryApplyPage(page));
+    },
+
+    inventoryManagementPage: async ({ page }, use) => {
+        await use(new InventoryManagementPage(page));
     },
 });
 
