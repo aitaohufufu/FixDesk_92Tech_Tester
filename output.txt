@@ -1,0 +1,40 @@
+◇ injected env (1) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+
+Running 1 test using 1 worker
+
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+ALL BUTTONS: [
+  '',
+  'คืนอุปกรณ์',
+  'เบิกวัสดุ',
+  'เปลี่ยนสถานะ',
+  'ยกเลิก',
+  'ยืนยันการปิดงาน'
+]
+[TECH-REPA-06] Updated status: failed | GAS Response: Success
+  ✘  1 [chromium] › src/tests/tech-repa(n).spec.js:127:9 › Technician Close Job (REPA-N) › TECH-REPA-06 ปิดงานซ่อม (จากหน้ารายละเอียด) — เลือก "สามารถแก้ไข/ซ่อมบำรุงได้" + "เรียบร้อย" (23.6s)
+
+
+  1) [chromium] › src/tests/tech-repa(n).spec.js:127:9 › Technician Close Job (REPA-N) › TECH-REPA-06 ปิดงานซ่อม (จากหน้ารายละเอียด) — เลือก "สามารถแก้ไข/ซ่อมบำรุงได้" + "เรียบร้อย" 
+
+    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('button').filter({ hasText: 'ยืนยันปิดงาน' }) to be visible
+
+
+       at ../pages/accept_job.js:221
+
+      219 |
+      220 |     async clickCloseJobConfirm() {
+    > 221 |         await this.closeJobConfirmBtn.waitFor({ state: 'visible', timeout: 10000 });
+          |                                       ^
+      222 |         await this.closeJobConfirmBtn.click();
+      223 |                 
+      224 |     }
+        at AcceptJobPage.clickCloseJobConfirm (/Users/pearlly/Documents/GitHub/FixDesk_92Tech_Tester/src/pages/accept_job.js:221:39)
+        at /Users/pearlly/Documents/GitHub/FixDesk_92Tech_Tester/src/tests/tech-repa(n).spec.js:155:29
+
+    Error Context: test-results/tech-repa(n)-Technician-Cl-24b93-้ไข-ซ่อมบำรุงได้-เรียบร้อย--chromium/error-context.md
+
+  1 failed
+    [chromium] › src/tests/tech-repa(n).spec.js:127:9 › Technician Close Job (REPA-N) › TECH-REPA-06 ปิดงานซ่อม (จากหน้ารายละเอียด) — เลือก "สามารถแก้ไข/ซ่อมบำรุงได้" + "เรียบร้อย" 

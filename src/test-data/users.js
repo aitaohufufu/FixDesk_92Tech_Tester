@@ -5,11 +5,11 @@ export const validUsers = [
         phone: "000000000",
     },
 
-    // {
-    //     username: "technician",
-    //     password: "pass1234",
-    //     phone: "111111111",
-    // },
+     {
+         username: "technician",
+         password: "pass1234",
+         phone: "111111111",
+     },
 
     // {
     //     username: "user",
