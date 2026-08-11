@@ -1,6 +1,6 @@
 export const validUsers = [
     {
-        username: "admin",
+        username: "admin_bot",
         password: "pass1234",
         newPassword: "newPassword",
         phone: "000000000",
@@ -8,21 +8,21 @@ export const validUsers = [
     },
 
     {
-        username: "technician",
+        username: "technician_bot",
         password: "pass1234",
         phone: "111111111",
         role: "technician",
     },
 
     {
-        username: "user",
+        username: "user_bot",
         password: "pass1234",
         phone: "222222222",
         role: "user",
     },
 
     {
-        username: "stock",
+        username: "stock_bot",
         password: "pass1234",
         newPassword: "newPassword",
         phone: "333333333",
@@ -30,7 +30,7 @@ export const validUsers = [
     },
 
     {
-        username: "manager",
+        username: "manager_bot",
         password: "pass1234",
         newPassword: "newPassword",
         phone: "4444444444",
