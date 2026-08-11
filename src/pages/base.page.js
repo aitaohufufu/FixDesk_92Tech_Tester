@@ -33,7 +33,11 @@ export class BasePage {
      * ฟังก์ชันเปิดหน้าเว็บตาม path ของเพจนั้นๆ
      */
     async goto() {
-        await this.page.goto(this.path);
+        await this.gotoPath(this.path);
+    }
+
+    async gotoPath(path) {
+        await this.page.goto(path.replace(/^\/+/, ''));
     }
 
     async gotoHome(loginPage, username, password, role) {

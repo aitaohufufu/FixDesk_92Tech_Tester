@@ -111,8 +111,8 @@ test.describe('Authentication [12, 14 disabled]', () => {
 
             await loginPage.clickLogout();
 
-            await loginPage.page.waitForURL('**/home');
-            expect(loginPage.isURL('/home')).toBe(true);
+            await loginPage.page.waitForURL('**/login');
+            expect(loginPage.isURL('/home')).toBe(false);
         });
     });
 
@@ -195,8 +195,8 @@ test.describe('Authentication [12, 14 disabled]', () => {
     // Security Case
     // =========================================================================
 
-    test(`AUTH-13 ป้องกันการเข้าถึง URL โดยตรงโดยไม่เข้าสู่ระบบก่อน`, async ({ page }) => {
-        await page.goto('/#/main/admin-home');
+    test(`AUTH-13 ป้องกันการเข้าถึง URL โดยตรงโดยไม่เข้าสู่ระบบก่อน`, async ({ page, loginPage }) => {
+        await loginPage.gotoPath('/#/main/admin-home');
 
         await page.waitForURL('**/login');
         await expect(page).toHaveURL(/.*\/login.*/);
