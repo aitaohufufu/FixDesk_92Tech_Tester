@@ -15,3 +15,8 @@ npx playwright install
 
 # execute
 npx playwright test --ui
+
+# report
+npx playwright show-report
+
+```
